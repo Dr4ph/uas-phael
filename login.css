@@ -1,0 +1,265 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(images/perpus.jpg);
+    background-size: cover;
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px 45px; 
+    background-color: midnightblue; 
+}
+
+.logo {
+    font-size: 1.5rem; 
+    color: #ffffff; 
+    text-decoration: none; 
+    font-weight: 700;
+}
+
+.navlist {
+    display: flex; 
+    list-style: none; 
+}
+
+.navlist li {
+    margin: 0 15px; 
+}
+
+.navlist a {
+    text-decoration: none; 
+    color: #ffffff; /* Change to white for better visibility */
+}
+
+.nav-right {
+    display: flex; 
+    align-items: center; 
+}
+
+.nav-right a {
+    margin-right: 20px; 
+    color: #ffffff; 
+    text-decoration: none;
+}
+
+.navlist li {
+    position: relative; 
+    transition: all 0.3s ease; 
+}
+
+.navlist li:hover {
+    transform: translateY(-4px); 
+}
+
+.navlist a {
+    display: block; 
+    padding: 10px 15px; 
+    color: #ffffff; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+
+.navlist li:hover a {
+    color: rgb(242, 194, 73); 
+}
+
+.nav-right a {
+    display: inline-block; 
+    font-size: 20px;
+    color: #ffffff; 
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.nav-right a:hover {
+    transform: translateY(-4px); 
+    color: rgb(236, 187, 64); 
+}
+
+.beranda {
+    padding-top: 150px;
+    margin: 50px;
+}
+
+.beranda-text {
+    padding: 40px;
+}
+
+.beranda-text h1 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.beranda-text p {
+    color: #ffffff;
+}
+
+.beranda-text h1 {
+    background-color: midnightblue;
+    color: #ffffff;
+    padding: 20px;
+    display: inline-flex;
+}
+
+.main-container {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px; 
+}
+
+.content {
+    text-align: center; /* Center text */
+}
+
+.footer {
+    background-color: midnightblue; 
+    padding: 10px; 
+    text-align: center; 
+    width: 100%;  
+}
+
+.footer-content {
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.footerlist {
+    list-style: none; 
+    padding: 0; 
+}
+
+.footerlist li {
+    margin: 10px 0; 
+}
+
+.footerlist a {
+    text-decoration: none; 
+    color: rgb(255, 255, 255); 
+    transition: color 0.3s; 
+}
+
+.footerlist a:hover {
+    transform: translateY(-4px);
+    color: rgb(238, 189, 64); 
+}
+
+#search-icon {
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.search-box {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 20px;
+    width: 200px;
+}
+
+.login-container {
+    background-color: white; 
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+    width: 300px; 
+    text-align: center;
+    position: relative; /* Change to relative for better positioning */
+    margin: 0 auto; /* Center the login container */
+ top: 0; /* Remove absolute positioning */
+}
+
+h2 {
+    margin-bottom: 20px; 
+    color: #333; 
+}
+
+.form-group {
+    margin-bottom: 15px; 
+    text-align: left; 
+}
+
+label {
+    display: block; 
+    margin-bottom: 5px; 
+    color: #555; 
+}
+
+input {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+
+button {
+    width: 100%;
+    padding: 10px; 
+    background-color: goldenrod; 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 16px; 
+}
+
+button:hover {
+    background-color: midnightblue; 
+}
+
+#message {
+    margin-top: 15px; 
+    text-align: center; 
+    color: red; 
+}
+
+.logintext {
+    color: white;
+    text-align: center;
+    padding-top: 150px;
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 600px;
+}
+
+.logintext h1 {
+    background-color: midnightblue;
+    color: #ffffff;
+    padding: 10px;
+    display: inline-flex;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        padding-top: -20px;
+    }
+
+    .navlist {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navlist li {
+        margin: 15px 0px; 
+    }
+}

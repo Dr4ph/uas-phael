@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peminjaman Buku</title>
+    <link rel="stylesheet" type="text/css" href="peminjaman.css">
+    <link rel="stylesheet" href="//unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">PerpusCuy!</a>
+
+        <ul class="navlist">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="Peminjaman Buku.html">Peminjaman</a></li>
+            <li><a href="Profil.html">Profil</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <a href="#" id="search-icon"><i class="ri-search-line"></i></a>
+            <input type="text" id="search-box" class="search-box" placeholder="Cari..." style="display: none;">
+            <a href="Peminjaman Buku.html"><i class="ri-book-line"></i></a>
+            <a href="https://www.instagram.com/raphaelldys"><i class="ri-user-line"></i></a>
+            <a href="#"><i class="ri-menu-5-line"></i></a>
+        </div>
+    </header>
+
+    <section class="peminjaman">
+        <div class="peminjaman-text">
+            <h1>Pilih Buku Yang Ingin<br>Anda Pinjam di PerpusCuy!</h1>
+            <h2>Bebas pilih dan pinjam buku, kembalikan tepat waktu.</h2>
+
+            <div class="syarat">
+                <div class="syarat-box">
+                    <h3>Syarat Peminjaman Buku :</h3>
+                    <p>1. Memiliki kartu anggota PerpusCuy!.</p>
+                    <p>2. Pilih buku yang tersedia di katalog ini.</p>
+                    <p>3. Isi formulir atau klik buku yang ingin dipinjam.</p>
+                    <p>4. Patuh pada batas waktu pengembalian (fisik/digital).</p>
+                    <p>5. Memiliki kartu anggota perpustakaan.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="item-box" onclick="showForm('Kamus Indonesia Inggris')">
+                <img src="images/kamus inggris.jpg" alt="Item Image" class="item-image">
+                <div class="item-details">
+                    <h2 class="item-title">Kamus Indonesia Inggris</h2>
+                    <p class="item-description">Kamus yang berisi seluruh kosakata dalam bahasa inggris yang ditranslasikan ke bahasa Indonesia.</p>
+                </div>
+            </div>
+            <div class="item-box" onclick="showForm('Siksa Neraka')">
+                <img src="images/siksa.jpg" alt="Item Image" class="item-image">
+                <div class="item-details">
+                    <h2 class="item-title">Siksa Neraka</h2>
+                    <p class="item-description">Gambaran siksa neraka yang diringkas dalam sebuah buku.</p>
+                </div>
+            </div>
+            <div class="item-box" onclick="showForm('Undang-Undang 1945')">
+                <img src="images/uud.jpg" alt="Item Image" class="item-image">
+                <div class="item-details">
+                    <h2 class="item-title">Undang-Undang 1945</h2>
+                    <p class="item-description">Berisi tentang Undang-Undang Negara Republik Indonesia.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="peminjaman-form" style="display: none;">
+            <h3>Form Peminjaman Buku</h3>
+            <p>Anda ingin meminjam: <span id="book-title"></span></p>
+            <form>
+                <label for="name">Nama:</label>
+                <input type="text" id="name" required>
+                <label for="member-id">ID Anggota:</label>
+                <input type="text" id="member-id" required>
+                <button type="submit">Pinjam Buku</button>
+                <button type="button" onclick="hideForm()">Batal</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="footer">
+        <ul class="footerlist">
+            <li><a href="https://www.instagram.com/raphaelldys">Klik Buat ke Instagram Yang Buat Ini</a></li>
+        </ul>
+    </section>
+
+    <script>
+        function showForm(bookTitle) {
+            const formContainer = document.getElementById('peminjaman-form');
+            formContainer.style.display = 'block';
+            document.getElementById('book-title').innerText = bookTitle;
+        }
+
+        function hideForm() {
+            const formContainer = document.getElementById('peminjaman-form');
+            formContainer.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

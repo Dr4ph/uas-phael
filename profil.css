@@ -1,0 +1,216 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    position: relative; 
+    overflow: auto; /* Allow scrolling */
+    height: 100vh; /* Ensure body takes full height */
+}
+
+body::before {
+    content: '';
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(images/perpus.jpg);
+    background-size: cover;
+    background-position: center; 
+    filter: blur(4px); 
+    z-index: -1; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px 45px; 
+    background-color: midnightblue; 
+}
+
+.logo {
+    font-size: 1.5rem; 
+    color: #ffffff; 
+    text-decoration: none; 
+    font-weight: 700;
+}
+
+.navlist {
+    display: flex; 
+    list-style: none; 
+    transition: all 0.3s ease; 
+}
+
+.navlist li {
+    margin: 0 15px; 
+    transition: all 0.3s ease; 
+}
+
+.navlist a {
+    text-decoration: none; 
+    color: #ffffff; 
+    transition: all 0.3s ease; 
+}
+
+.nav-right {
+    display: flex; 
+    align-items: center; 
+    transition: all 0.3s ease; 
+}
+
+.nav-right a {
+    margin-right: 20px; 
+    color: #ffffff; 
+    text-decoration: none;
+    transition: all 0.3s ease; 
+}
+
+.profile {
+    position: relative;
+    z-index: 1; 
+    padding: 57px;
+    color: #ffffff; 
+}
+
+.profile-content {
+    max-width: 800px; 
+    margin: 0 auto; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 20px;
+    border-radius: 10px; 
+}
+
+.profile h1, .profile h2 {
+    color: #ffffff; 
+    font-size: 30px;
+}
+
+.profile ul {
+    list-style-type: disc; 
+    margin-left: 20px; 
+    color: #ffffff;
+}
+
+.footer {
+    background-color: #f0f0f0; 
+    padding: 10px; 
+    text-align: center; 
+    width: 100%; 
+    position: relative; 
+    overflow: hidden; 
+}
+
+.footerlist {
+    list-style: none; 
+    padding: 0; 
+}
+
+.footerlist li {
+    margin: 10px 0; 
+}
+
+.footerlist a {
+    text-decoration: none; 
+    color: midnightblue; 
+    transition: color 0.3s; 
+}
+
+.footerlist a:hover {
+    transform: translateY(-4px);
+    color: rgb(238, 189, 64); 
+}
+
+#search-icon {
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.search-box {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 20px;
+    width: 200px;
+}
+
+.navlist li:hover {
+    transform: translateY(-4px); 
+}
+
+.navlist li:hover a {
+    color: rgb(242, 194, 73); 
+}
+
+.nav-right a:hover {
+    transform: translateY(-4px); 
+    color: rgb(236, 187, 64); 
+}
+
+.footerlist a:hover {
+    transform: translateY(-4px);
+    color: rgb(238, 189, 64); 
+}
+
+.login-button:hover {
+    background-color: midnightblue; 
+}
+
+@media (max-width: 1920px) {
+    header {
+        padding: 10px 20px; /* Reduce padding on smaller screens */
+    }
+
+    .navlist {
+        flex-direction: row ; /* Stack navigation items vertically */
+        width: 100%; /* Full width for mobile */
+        background-color: midnightblue; /* Background for mobile menu */
+        position: absolute; /* Positioning for dropdown */
+        top: 60px; /* Position below the header */
+        left: 0; /* Align to the left */
+        display: none; /* Hide by default */
+    }
+
+    .navlist.active {
+        display: block; /* Show when active */
+    }
+
+    .navlist li {
+        margin: 10px 0; /* Space between items */
+    }
+
+    .sidebar-toggle {
+        display: block; /* Show toggle button */
+        cursor: pointer; /* Pointer cursor */
+    }
+
+    .search-box {
+        width: 100%; /* Full width for search box */
+        margin: 10px 0; /* Margin for spacing */
+    }
+}
+
+@media (max-width: 768px) {
+    .beranda-text h1 {
+        font-size: 30px; /* Smaller heading on mobile */
+    }
+
+    .beranda {
+        margin: 20px; /* Reduce margin */
+    }
+
+    .nav-right {
+        flex-direction: column; /* Stack login links */
+        align-items: flex-start; /* Align to start */
+    }
+
+    .nav-right a {
+        margin: 5px 0; /* Space between links */
+    }
+}
